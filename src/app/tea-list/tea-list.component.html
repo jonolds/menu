@@ -1,1 +1,12 @@
 <h2>Teas</h2>
+
+<div *ngFor="let tea of teas">
+	<h3>
+		<a [title]="tea.name + ' details'">
+			{{tea.name}}
+		</a>
+	</h3>
+	<p *ngIf="tea.description">
+		Description: {{tea.description}}
+	</p>
+</div>
