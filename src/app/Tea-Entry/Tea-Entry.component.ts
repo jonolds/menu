@@ -17,12 +17,12 @@ export class TeaEntryComponent {
 
 	// constructor() {}
 
-	constructor(public NAME: string, public TYPE: string, public TASTE: string, public DESC: string) {
-		this.name = NAME;
-		this.type = TYPE;
-		this.taste = TASTE;
-		this.desc = DESC;
-	}
+	// constructor(public name: string, public type: string, public taste: string, public desc: string) {
+	// 	this.name = name;
+	// 	this.type = type;
+	// 	this.taste = taste;
+	// 	this.desc = desc;
+	// }
 
 	// share() {
 	// 	window.alert('The tea has been shared!');

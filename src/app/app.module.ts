@@ -22,9 +22,9 @@ import { TeaEntryComponent } from './tea-entry/tea-entry.component';
 		TeaListComponent,
 		TeaEntryComponent
 	],
-	entryComponents: [
-		TeaEntryComponent
-	],
+	// entryComponents: [
+	// 	TeaEntryComponent
+	// ],
 	bootstrap: [ AppComponent ]
 })
 export class AppModule { }
