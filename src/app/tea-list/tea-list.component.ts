@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { teas } from '../teas';
+import { Teas } from '../Teas';
 
 @Component({
   selector: 'app-tea-list',
@@ -8,7 +8,7 @@ import { teas } from '../teas';
   styleUrls: ['./tea-list.component.css']
 })
 export class TeaListComponent {
-  teas = teas;
+  teas = Teas;
 
   share() {
     window.alert('The tea has been shared!');
