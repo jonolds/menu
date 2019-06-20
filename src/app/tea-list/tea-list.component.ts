@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { Teas } from '../Teas';
 
 @Component({
-  selector: 'app-tea-list',
+	selector: 'app-tea-list',
   templateUrl: './tea-list.component.html',
   styleUrls: ['./tea-list.component.css']
 })
