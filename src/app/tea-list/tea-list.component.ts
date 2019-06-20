@@ -4,13 +4,13 @@ import { Teas } from '../Teas';
 
 @Component({
 	selector: 'app-tea-list',
-  templateUrl: './tea-list.component.html',
-  styleUrls: ['./tea-list.component.css']
+	templateUrl: './tea-list.component.html',
+	styleUrls: ['./tea-list.component.css']
 })
 export class TeaListComponent {
-  teas = Teas;
+	teas = Teas;
 
-  share() {
-    window.alert('The tea has been shared!');
-  }
+	share() {
+		window.alert('The tea has been shared!');
+	}
 }

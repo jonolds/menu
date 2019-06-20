@@ -6,25 +6,25 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { TeaListComponent } from './tea-list/tea-list.component';
-import { TeaEntryComponent } from './Tea-Entry/Tea-Entry.component';
+import { TeaEntryComponent } from './tea-entry/tea-entry.component';
 
 @NgModule({
-  imports: [
-    BrowserModule,
-    ReactiveFormsModule,
-    RouterModule.forRoot([
-      { path: '', component: TeaListComponent },
-    ])
-  ],
-  declarations: [
-    AppComponent,
-    TopBarComponent,
-    TeaListComponent,
-    TeaEntryComponent
-  ],
-  entryComponents: [
-    TeaEntryComponent
-  ],
-  bootstrap: [ AppComponent ]
+	imports: [
+		BrowserModule,
+		ReactiveFormsModule,
+		RouterModule.forRoot([
+			{ path: '', component: TeaListComponent },
+		])
+	],
+	declarations: [
+		AppComponent,
+		TopBarComponent,
+		TeaListComponent,
+		TeaEntryComponent
+	],
+	entryComponents: [
+		TeaEntryComponent
+	],
+	bootstrap: [ AppComponent ]
 })
 export class AppModule { }

@@ -4,18 +4,24 @@ import { Component } from '@angular/core';
 
 
 @Component({
-	selector: 'app-Tea-Entry',
-	templateUrl: './Tea-Entry.component.html',
-	styleUrls: ['./Tea-Entry.component.css']
+	selector: 'app-tea-entry',
+	styleUrls: ['./tea-entry.component.css'],
+	templateUrl: './tea-entry.component.html'
 })
 export class TeaEntryComponent {
-	// teas = Teas;
+	desc: string;
+	name: string;
+	taste: string;
+	type: string;
 
-	constructor() {}
+	// constructor() {}
 
-	// constructor(public name: string, public type: string, public taste: string, public desc: string) {
-
-	// }
+	constructor(public NAME: string, public TYPE: string, public TASTE: string, public DESC: string) {
+		this.name = NAME;
+		this.type = TYPE;
+		this.taste = TASTE;
+		this.desc = DESC;
+	}
 
 	// share() {
 	// 	window.alert('The tea has been shared!');
