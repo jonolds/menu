@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 	styleUrls: ['./tea-entry.component.css'],
 	templateUrl: './tea-entry.component.html'
 })
+// asdf
 export class TeaEntryComponent {
 	desc: string;
 	name: string;
