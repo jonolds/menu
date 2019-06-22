@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Teas } from '../Teas';
+import { Teas } from '../teas';
 
 @Component({
 	selector: 'app-tea-list',
