@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 import { Teas } from '../teas';
 
@@ -9,8 +9,5 @@ import { Teas } from '../teas';
 })
 export class TeaListComponent {
 	teas = Teas;
-
-	share() {
-		window.alert('The tea has been shared!');
-	}
+	displayedColumns: string[] = ['name', 'taste'];
 }
