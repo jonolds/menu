@@ -17,13 +17,13 @@
   "dependencies": {
     "@angular/animations": "^8.0.2",
     "@angular/cdk": "^8.0.1",
-    "@angular/common": "^8.0.0",
-    "@angular/compiler": "^8.0.0",
+    "@angular/common": "^8.0.2",
+    "@angular/compiler": "^8.0.2",
     "@angular/core": "^8.0.2",
     "@angular/forms": "~8.0.2",
     "@angular/material": "^8.0.1",
-    "@angular/platform-browser": "^8.0.0",
-    "@angular/platform-browser-dynamic": "^8.0.0",
+    "@angular/platform-browser": "^8.0.2",
+    "@angular/platform-browser-dynamic": "^8.0.2",
     "@angular/router": "~8.0.2",
     "@nativescript/schematics": "^0.6.0",
     "core-js": "^3.1.4",
@@ -56,7 +56,7 @@
     "protractor": "~5.4.0",
     "ts-node": "~8.3.0",
     "tslint": "~5.18.0",
-    "typescript": "^3.4.5"
+    "typescript": "^3.5.2"
   },
   "nativescript": {
     "id": "org.nativescript.ngsample"
