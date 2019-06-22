@@ -1,6 +1,4 @@
-import { Component } from '@angular/core';
-
-// import { Teas } from '../Teas';
+import { Component, Input } from '@angular/core';
 
 
 @Component({
@@ -10,6 +8,7 @@ import { Component } from '@angular/core';
 })
 // asdf
 export class TeaEntryComponent {
+	@Input() object: any;
 	desc: string;
 	name: string;
 	taste: string;
