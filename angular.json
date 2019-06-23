@@ -115,10 +115,6 @@
           }
         }
       }
-    }
-  },
-  "defaultProject": "menu",
-  "cli": {
-    "defaultCollection": "@nativescript/schematics"
-  }
+    }},
+  "defaultProject": "menu"
 }
