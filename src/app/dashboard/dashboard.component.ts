@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Tea} from '../tea';
-import {TeaService} from '../tea.service';
+import {Tea} from '../definitions/tea';
+import {ProductService} from '../product.service';
 
 @Component({
 	selector: 'app-dashboard',
@@ -10,13 +10,13 @@ import {TeaService} from '../tea.service';
 export class DashboardComponent implements OnInit {
 	teas: Tea[] = [];
 
-	constructor(private teaService: TeaService) { }
+	constructor(private productService: ProductService) { }
 
 	ngOnInit() {
 		this.getTeas();
 	}
 
 	getTeas(): void {
-		this.teaService.getTeas().subscribe(teas => this.teas = teas.slice(1, 5));
+		this.productService.getTeas().subscribe(teas => this.teas = teas.slice(1, 5));
 	}
 }

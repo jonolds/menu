@@ -1,14 +1,15 @@
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
+import {AppRoutingModule} from './app-routing.module';
 
 import {AppComponent} from './app.component';
 import {DashboardComponent} from './dashboard/dashboard.component';
-import {TeaDetailComponent} from './tea-detail/tea-detail.component';
 import {TeasComponent} from './teas/teas.component';
-import {MessagesComponent} from './messages/messages.component';
+import {SignaturesComponent} from './signatures/signatures.component';
 
-import {AppRoutingModule} from './app-routing.module';
+import {ProductDetailComponent} from './product-detail/product-detail.component';
+import {MessagesComponent} from './messages/messages.component';
 
 @NgModule({
 	imports: [
@@ -20,8 +21,9 @@ import {AppRoutingModule} from './app-routing.module';
 		AppComponent,
 		DashboardComponent,
 		TeasComponent,
-		TeaDetailComponent,
-		MessagesComponent
+		ProductDetailComponent,
+		MessagesComponent,
+		SignaturesComponent
 	],
 	bootstrap: [AppComponent]
 })

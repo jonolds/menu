@@ -1,0 +1,12 @@
+<div *ngIf="tea">
+	<h2>{{tea.name}} Details</h2>
+	<div><span>Id: </span>{{tea.id}}</div>
+	<div><span>Description: </span>{{tea.description}}</div>
+	<button (click)="goBack()">go back</button>
+</div>
+<div *ngIf="signature">
+	<h2>{{signature.name}} Details</h2>
+	<div><span>Id: </span>{{signature.id}}</div>
+	<div><span>Description: </span>{{signature.description}}</div>
+	<button (click)="goBack()">go back</button>
+</div>

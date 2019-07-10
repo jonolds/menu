@@ -3,13 +3,15 @@ import {RouterModule, Routes} from '@angular/router';
 
 import {DashboardComponent} from './dashboard/dashboard.component';
 import {TeasComponent} from './teas/teas.component';
-import {TeaDetailComponent} from './tea-detail/tea-detail.component';
+import {ProductDetailComponent} from './product-detail/product-detail.component';
+import {SignaturesComponent} from './signatures/signatures.component';
 
 const routes: Routes = [
 	{path: '', redirectTo: '/dashboard', pathMatch: 'full'},
 	{path: 'dashboard', component: DashboardComponent},
-	{path: 'detail/:id', component: TeaDetailComponent},
-	{path: 'teas', component: TeasComponent}
+	{path: 'product-detail/:id', component: ProductDetailComponent},
+	{path: 'teas', component: TeasComponent},
+	{path: 'signatures', component: SignaturesComponent}
 ];
 
 @NgModule({
