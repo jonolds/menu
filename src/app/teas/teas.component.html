@@ -1,0 +1,8 @@
+<h2>Teas</h2>
+<ul class="teas">
+	<li *ngFor="let tea of teas">
+		<a routerLink="/detail/{{tea.id}}">
+			<span class="badge">{{tea.id}}</span> {{tea.name}}
+		</a>
+	</li>
+</ul>
