@@ -6,5 +6,5 @@ import {Component} from '@angular/core';
 	styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-	title = 'Six Twelve Menu';
+	title = '"The cafe formerly known as Imbibe" Menu';
 }

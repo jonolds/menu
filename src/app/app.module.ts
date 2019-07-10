@@ -15,7 +15,7 @@ import {MessagesComponent} from './messages/messages.component';
 	imports: [
 		BrowserModule,
 		FormsModule,
-		AppRoutingModule
+		AppRoutingModule,
 	],
 	declarations: [
 		AppComponent,
