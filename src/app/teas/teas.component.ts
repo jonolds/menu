@@ -1,3 +1,4 @@
+// ======= teas.component.ts =======
 import {Component, OnInit} from '@angular/core';
 
 import {Tea} from '../definitions/tea';
@@ -12,12 +13,7 @@ export class TeasComponent implements OnInit {
 	teas: Tea[];
 
 	constructor(private productService: ProductService) { }
+	ngOnInit() { this.getTeas(); }
 
-	ngOnInit() {
-		this.getTeas();
-	}
-
-	getTeas(): void {
-		this.productService.getTeas().subscribe(teas => this.teas = teas);
-	}
+	getTeas(): void { this.productService.getTeas().subscribe(teas => this.teas = teas); }
 }

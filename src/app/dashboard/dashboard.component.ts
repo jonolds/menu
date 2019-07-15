@@ -1,3 +1,4 @@
+// ======= dashboard.component.ts =======
 import {Component, OnInit} from '@angular/core';
 import {Tea} from '../definitions/tea';
 import {ProductService} from '../product.service';
@@ -11,12 +12,7 @@ export class DashboardComponent implements OnInit {
 	teas: Tea[] = [];
 
 	constructor(private productService: ProductService) { }
+	ngOnInit() { this.getTeas();}
 
-	ngOnInit() {
-		this.getTeas();
-	}
-
-	getTeas(): void {
-		this.productService.getTeas().subscribe(teas => this.teas = teas.slice(1, 5));
-	}
+	getTeas(): void { this.productService.getTeas().subscribe(teas => this.teas = teas.slice(1, 5)); }
 }

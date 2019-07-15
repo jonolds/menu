@@ -1,3 +1,4 @@
+// ======= product-detail.component.ts =======
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {Location} from '@angular/common';
@@ -15,15 +16,8 @@ export class ProductDetailComponent implements OnInit {
 	tea: Tea;
 	signature: Signature;
 
-	constructor(
-		private route: ActivatedRoute,
-		private productService: ProductService,
-		private location: Location
-	) {}
-
-	ngOnInit(): void {
-		this.getProduct();
-	}
+	constructor(private route: ActivatedRoute, private productService: ProductService, private location: Location) {}
+	ngOnInit(): void { this.getProduct(); }
 
 	getProduct(): void {
 		const id = +this.route.snapshot.paramMap.get('id');
@@ -35,7 +29,5 @@ export class ProductDetailComponent implements OnInit {
 		}
 	}
 
-	goBack(): void {
-		this.location.back();
-	}
+	goBack(): void { this.location.back(); }
 }

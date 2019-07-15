@@ -1,9 +1,136 @@
+// ======= in-mem-data.service.ts =======
+import { InMemoryDbService } from 'angular-in-memory-web-api';
+import { Tea } from './definitions/tea';
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+	providedIn: 'root',
 })
-export class InMemoryDataService {
+export class InMemoryDataService implements InMemoryDbService {
+	createDb() {
+		const teas = [
+			{
+				id: 100, name: 'Jade Cloud', type: 'Green', available: true,
+				description: 'A delicious everyday green tea nurtured by the clouds and cool mist of early spring',
+			},
+			{
+				id: 101, name: 'Jasmine', type: 'Green', available: true,
+				description: 'Fresh and soothing green tea scented with the enchanting aroma of jasmine blossoms',
+			},
+			{
+				id: 102, name: 'Matcha Super Green', type: 'Green', available: true,
+				description: 'An energizing blend of matcha and sencha with a deep sweetness and smooth unami richness',
+			},
+			{
+				id: 103, name: 'Raspberry Green Tea', type: 'Green', available: true,
+				description: 'Smooth, steamed green tea blended with tart hibiscus and succulent raspberries',
+			},
+			{
+				id: 104, name: 'Vanilla Bean', type: 'Black', available: true,
+				description: 'Rich and malty with a smooth, sweet vanilla finish',
+			},
+			{
+				id: 105, name: 'Earl Grey', type: 'Black', available: true,
+				description: 'Smooth and lively with the unique citrusy, floral aroma of bergamot oranges',
+			},
+			{
+				id: 106, name: 'Earl Grey Lavender', type: 'Black', available: true,
+				description: 'Enchanting lavender perfectly complements the floral aromas and citrus notes of Earl Grey',
+			},
+			{
+				id: 107, name: 'English Breakfast', type: 'Black', available: true,
+				description: 'Lively, robust red cup with a brisk flavor and sweet caramel undertones',
+			},
+			{
+				id: 108, name: 'Masala Chai', type: 'Black', available: true,
+				description: 'A robust, full-bodied black tea blended with aromatic traditional Indian masala spices',
+			},
+			{
+				id: 109, name: 'Wild Thai Black', type: 'Black', available: true,
+				description: 'Energetic and hefty with aromatic notes of ripe pit fruits, Bing cherry, graham cracker and cassia',
+			},
+			{
+				id: 110, name: 'White Peony', type: 'White', available: true,
+				description: 'Pure white tea with mellow-sweet notes of fresh hay and accents of honey and nectar',
+			},
+			{
+				id: 111, name: 'Silver Needle', type: 'White', available: true,
+				description: 'Reserve white tea with a sublime, sweet flavor and rich, savory finish',
+			},
+			{
+				id: 112, name: 'White Tea Rose Melange', type: 'White', available: true,
+				description: '??????',
+			},
+			{
+				id: 113, name: 'White Melon', type: 'White', available: true,
+				description: '??????',
+			},
+			{
+				id: 114, name: 'Ruby Oolong', type: 'Oolong', available: true,
+				description: 'Deeply fermented, full-bodied Oolong with complex layers of cacao, raisins and black cherry',
+			},
+			{
+				id: 115, name: 'Jade Oolong', type: 'Oolong', available: true,
+				description: 'Aromatic and flavorful with notes of fresh-cut gardenia, freesia blossoms and tropical fruits',
+			},
+			{
+				id: 116, name: 'Coconut Oolong', type: 'Oolong', available: true,
+				description: 'Creamy, smooth coconut perfectly blended with a floral Bao Zhong Oolong with subtle notes of lilac',
+			},
+			{
+				id: 117, name: 'Iron Goddess Of Mercy', type: 'Oolong', available: false,
+				description: 'Smooth and rich with aromas of roasted chestnut and notes of dried apricot',
+			},
+			{
+				id: 118, name: 'Citron Oolong', type: 'Oolong', available: true,
+				description: '??????',
+			},
+			{
+				id: 119, name: 'Valerian Dream', type: 'Herbal', available: true,
+				description: 'Calming botanical and aromatic flowers with the relaxing effects of valerian rot',
+			},
+			{
+				id: 120, name: 'Golden Chamomile Blossoms', type: 'Herbal', available: true,
+				description: 'Golden liquoring infusion with a fragrance reminiscent of honey and fruit blossoms',
+			},
+			{
+				id: 121, name: 'Peppermint', type: 'Herbal', available: true,
+				description: 'Distinctive flavor and heady aroma, calms the body and soothes the digestive system',
+			},
+			{
+				id: 122, name: 'Blueberry Rooibos', type: 'Herbal', available: true,
+				description: 'A succulent rooibos blend with sweet blueberries and revitalizing schizandra berries',
+			},
+			{
+				id: 123, name: 'Rooibos', type: 'Herbal', available: true,
+				description: 'Naturally sweet refreshing pure African rooibos with a deep red, nectar-like infusion',
+			},
+			{
+				id: 124, name: 'Scarlet', type: 'Herbal', available: true,
+				description: 'A deep red infusion that is tart with natural tasting notes of blueberry and cherry',
+			},
+			{
+				id: 125, name: 'Tangerine Ginger', type: 'Herbal', available: true,
+				description: 'A punchy hibiscus blend with zesty, revitalizing ginger and succulent citrus',
+			},
+			{
+				id: 126, name: 'Lemongrass', type: 'Herbal', available: true,
+				description: '??????',
+			},
+			{
+				id: 127, name: 'Cinnamon Plum', type: 'Herbal', available: true,
+				description: 'A warming blend of juicy plum, succulent currant and sweet Saigon Cinnamon',
+			}
+		];
+		return {teas};
+	}
 
-  constructor() { }
+	// Overrides the genId method to ensure that a hero always has an id.
+	// If the heroes array is empty,
+	// the method below returns the initial number (11).
+	// if the heroes array is not empty, the method below returns the highest
+	// hero id + 1.
+	genId(teas: Tea[]): number {
+		return teas.length > 0 ? Math.max(...teas.map(hero => hero.id)) + 1 : 100;
+	}
 }

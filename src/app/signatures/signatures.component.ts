@@ -1,3 +1,4 @@
+// ======= signatures.component.ts =======
 import {Component, OnInit} from '@angular/core';
 
 import {Signature} from '../definitions/signature';
@@ -12,12 +13,7 @@ export class SignaturesComponent implements OnInit {
 	signatures: Signature[];
 
 	constructor(private productService: ProductService) { }
+	ngOnInit() { this.getSignatures(); }
 
-	ngOnInit() {
-		this.getSignatures();
-	}
-
-	getSignatures(): void {
-		this.productService.getSignatures().subscribe(signatures => this.signatures = signatures);
-	}
+	getSignatures(): void { this.productService.getSignatures().subscribe(signatures => this.signatures = signatures); }
 }
